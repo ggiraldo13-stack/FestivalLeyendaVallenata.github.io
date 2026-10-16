@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Vallenato | Areandina, Valledupar & Cesar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Bar de Protocolo Superior -->
+    <div class="protocol-bar">
+        <div class="protocol-container">
+            <span class="protocol-title"><i class="fa-solid fa-crown"></i> PRESENTACIÓN OFICIAL DE GESTIÓN INSTITUCIONAL</span>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <div>
+                        <strong>Ernesto Orozco Durán</strong>
+                        <small>Alcalde de Valledupar</small>
+                    </div>
+                </div>
+                <div class="protocol-card">
+                    <i class="fa-solid fa-landmark"></i>
+                    <div>
+                        <strong>Elvia Milena Sanjuán Dávila</strong>
+                        <small>Gobernadora del Cesar</small>
+                    </div>
+                </div>
+                <div class="protocol-card highlight-academic">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <strong>Dra. Gelca Patricia Gutiérrez Barranco</strong>
+                        <small>Rectora Areandina - Sede Valledupar</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de Navegación Principal -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="institutional-flags">
+                <span class="flag-valledupar" title="Bandera de Valledupar"></span>
+                <span class="flag-cesar" title="Bandera del Cesar"></span>
+            </div>
+            <span class="brand-title">Festival Vallenato <span>Areandina</span></span>
+        </div>
+        <nav class="nav-links">
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="#boleteria">Escenarios & Boletas</a>
+            <a href="#votacion">Votación Popular</a>
+            <a href="#turismo">Rutas Turísticas</a>
+            <a href="#artesanias">Feria Cesar</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn-emergency" onclick="toggleEmergencias()"><i class="fa-solid fa-phone-flip"></i> Puntos de Auxilio / Salud</button>
+        </div>
+    </header>
+
+    <!-- Banner de Atención en Salud/Emergencia (Oculto por defecto) -->
+    <div id="emergency-banner" class="emergency-modal hidden">
+        <div class="emergency-content">
+            <h4><i class="fa-solid fa-kit-medical"></i> Atención al Visitante y Puntos de Auxilio</h4>
+            <ul>
+                <li><strong>Módulo de Salud Hurtado (Río Guatapurí):</strong> Cruz Roja & Defensa Civil</li>
+                <li><strong>Puesto de Mando Unificado (Plaza Alfonso López):</strong> Atención de Primeros Auxilios</li>
+                <li><strong>PQR & Atención Turística:</strong> Línea Gratuita 01-8000-VALLEDUPAR</li>
+            </ul>
+            <button class="btn-close" onclick="toggleEmergencias()">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <div class="tag-unesco">
+                <i class="fa-solid fa-award"></i> Patrimonio Cultural Inmaterial de la Humanidad - UNESCO[cite: 1, 2]
+            </div>
+            <h1>Valledupar en Abril: Donde el <span>Acordeón, la Caja y la Guacharaca</span> se Vuelven Leyenda</h1>
+            <p>De las mañanas bajo el palo de mango en la Plaza Alfonso López a los baños helados en el místico Río Guatapurí[cite: 1, 2]. Vive la fiesta de la mano de la Alcaldía de Valledupar, la Gobernación del Cesar y la Fundación Universitaria del Área Andina.</p>
+            
+            <div class="countdown-card">
+                <div class="countdown-header">
+                    <span class="dot-live"></span> CUENTA REGRESIVA OFICIAL · CORONACIÓN DE REYES
+                </div>
+                <div class="timers">
+                    <div><span id="days">193</span><small>DÍAS</small></div>
+                    <span>:</span>
+                    <div><span id="hours">19</span><small>HORAS</small></div>
+                    <span>:</span>
+                    <div><span id="minutes">39</span><small>MINUTOS</small></div>
+                    <span>:</span>
+                    <div><span id="seconds">01</span><small>SEGUNDOS</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="card-floating card-1">
+                <i class="fa-solid fa-crown" style="color: var(--areandina-magenta);"></i>
+                <div>
+                    <strong>Rey Vallenato</strong>
+                    <p>Concurso Oficial de Reyes</p>
+                </div>
+            </div>
+            <div class="card-floating card-2">
+                <i class="fa-solid fa-school" style="color: var(--areandina-green);"></i>
+                <div>
+                    <strong>Respaldo Académico</strong>
+                    <p>Areandina Sede Valledupar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmisión Oficial -->
+    <section class="section-container video-section">
+        <h2>Transmisión Protocolaria de Gobierno & Academia</h2>
+        <p class="section-subtitle">Acompañamiento a la imposición de bandas e inicio de actividades del folclor.</p>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/EPPzudYFSoM" title="Posesión Gobernadora del Cesar | Elvia Milena Sanjuan Davila 2024 - 2027" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Guía de Escenarios y Boletería -->
+    <section id="boleteria" class="section-container alt-bg">
+        <h2>Guía Transparente de Escenarios y Acceso</h2>
+        <p class="section-subtitle">Conoce qué eventos son 100% gratuitos y cuáles requieren boletería de la Fundación.</p>
+        
+        <div class="access-grid">
+            <div class="access-card free-access">
+                <div class="access-badge">100% GRATIS</div>
+                <h3>Escenarios Públicos & Concursos Diurnos</h3>
+                <p>Acceso libre para la comunidad y visitantes en plazas y calles de Valledupar.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Desfile de Piloneras (Inauguración)[cite: 1, 2]</li>
+                    <li><i class="fa-solid fa-check"></i> Concursos en la Plaza Alfonso López[cite: 1, 2]</li>
+                    <li><i class="fa-solid fa-check"></i> Parrandas bajo el Palo de Mango[cite: 1, 2]</li>
+                    <li><i class="fa-solid fa-check"></i> Eventos diurnos en el Río Guatapurí[cite: 1, 2]</li>
+                </ul>
+            </div>
+            <div class="access-card paid-access">
+                <div class="access-badge ticket-badge">BOLETERÍA PAGA</div>
+                <h3>Parque de la Leyenda Vallenata</h3>
+                <p>Conciertos nocturnos principales y finales en la Tarima Colacho Mendoza[cite: 1, 2].</p>
+                <ul>
+                    <li><i class="fa-solid fa-ticket"></i> Noches de Concierto Internacional</li>
+                    <li><i class="fa-solid fa-ticket"></i> Gran Final de Rey de Reyes / Rey Vallenato</li>
+                    <li><i class="fa-solid fa-ticket"></i> Espectáculos Musicales Nocturnos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Votación Popular -->
+    <section id="votacion" class="section-container">
+        <h2>Votación Popular por Categoría (Reconocimiento del Público)</h2>
+        <p class="section-subtitle">Cada ciudadano puede votar una sola vez por categoría ingresando su documento de identidad.</p>
+        
+        <div class="legal-notice">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span><strong>Aviso Legal Oficial:</strong> El voto digital otorga el <em>Reconocimiento Popular del Público</em> y no reemplaza ni interfiere en el fallo técnico del Jurado Calificador en la Tarima Francisco "El Hombre"[cite: 1, 2].</span>
+        </div>
+
+        <div class="voter-auth-box">
+            <label for="voter-id">Ingrese su Cédula o Documento de Identidad para Validar el Voto Único:</label>
+            <input type="text" id="voter-id" placeholder="Ej: 1065123456" />
+        </div>
+
+        <div class="voting-grid">
+            <div class="voting-card">
+                <div class="voting-icon"><i class="fa-solid fa-crown"></i></div>
+                <h3>Acordeón Profesional</h3>
+                <p>Insignia Dorada Rey Vallenato</p>
+                <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+                <button class="btn-vote" onclick="registrarVoto('profesional', this)">Votar por Categoría</button>
+            </div>
+            <div class="voting-card">
+                <div class="voting-icon"><i class="fa-solid fa-guitar"></i></div>
+                <h3>Acordeón Aficionado</h3>
+                <p>Insignia Fuelle de Oro</p>
+                <div class="progress-bar"><div class="progress-fill" style="width: 48%;"></div></div>
+                <button class="btn-vote" onclick="registrarVoto('aficionado', this)">Votar por Categoría</button>
+            </div>
+            <div class="voting-card">
+                <div class="voting-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+                <h3>Canción Inédita</h3>
+                <p>Pluma del Verso Vallenato</p>
+                <div class="progress-bar"><div class="progress-fill" style="width: 82%;"></div></div>
+                <button class="btn-vote" onclick="registrarVoto('inedita', this)">Votar por Categoría</button>
+            </div>
+            <div class="voting-card">
+                <div class="voting-icon"><i class="fa-solid fa-comments"></i></div>
+                <h3>Piqueria Vallenata</h3>
+                <p>Trofeo Rey de la Piqueria</p>
+                <div class="progress-bar"><div class="progress-fill" style="width: 55%;"></div></div>
+                <button class="btn-vote" onclick="registrarVoto('piqueria', this)">Votar por Categoría</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rutas Turísticas -->
+    <section id="turismo" class="section-container alt-bg">
+        <h2>Rutas Turísticas e Hitos Vallenatos</h2>
+        <p class="section-subtitle">Lugares emblemáticos recomendados por la Alcaldía de Valledupar.</p>
+        <div class="places-grid">
+            <div class="place-card">
+                <i class="fa-solid fa-landmark-flag"></i>
+                <h4>Plaza Alfonso López</h4>
+                <p>Cuna histórica del Festival Vallenato desde 1968[cite: 1, 2].</p>
+            </div>
+            <div class="place-card">
+                <i class="fa-solid fa-water"></i>
+                <h4>Río Guatapurí (Hurtado)</h4>
+                <p>Balneario emblemático y sirena del Guatapurí[cite: 1, 2].</p>
+            </div>
+            <div class="place-card">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <h4>Glorieta de los Juglares</h4>
+                <p>Monumento e hito cultural en la entrada a la ciudad.</p>
+            </div>
+            <div class="place-card">
+                <i class="fa-solid fa-archway"></i>
+                <h4>Parque de la Leyenda</h4>
+                <p>Escenario majestuoso "Consuelo Araujonoguera"[cite: 1, 2].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feria Artesanal Cesar -->
+    <section id="artesanias" class="section-container">
+        <h2>Muestra Artesanal y Gastronómica del Cesar</h2>
+        <p class="section-subtitle">Impulso a la Economía Naranja de la Gobernación del Cesar.</p>
+        <div class="crafts-grid">
+            <div class="craft-item">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Mochilas Arhuacas & Kankuamas</span>
+            </div>
+            <div class="craft-item">
+                <i class="fa-solid fa-cheese"></i>
+                <span>Queso Costeño & Panuchí Tradicional</span>
+            </div>
+            <div class="craft-item">
+                <i class="fa-solid fa-gem"></i>
+                <span>Instrumentos Tallados en Madera</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página Institucional -->
+    <footer>
+        <div class="footer-alliance">
+            <p><strong>Alianza Estratégica Institucional:</strong></p>
+            <p>Alcaldía de Valledupar · Gobernación del Cesar · Fundación Universitaria del Área Andina (Sede Valledupar) · Fundación Festival de la Leyenda Vallenata</p>
+        </div>
+        <p class="copyright">&copy; 2026 Plataforma Oficial de Innovación Cultural y Académica.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

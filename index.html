@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival de la Leyenda Vallenata | Areandina, Valledupar & Cesar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        areandina: {
+                            green: '#007A33',
+                            magenta: '#E2007A',
+                            lightgreen: '#00A846'
+                        },
+                        valledupar: {
+                            blue: '#003366',
+                            red: '#CC0000',
+                            navy: '#002244'
+                        },
+                        festival: {
+                            gold: '#C5A059',
+                            darkgold: '#9E7A32',
+                            cream: '#FAF6ED'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF6ED;
+        }
+        .gradient-gold {
+            background: linear-gradient(135deg, #C5A059 0%, #9E7A32 100%);
+        }
+        .gradient-hero {
+            background: linear-gradient(135deg, #002244 0%, #003366 50%, #007A33 100%);
+        }
+        .gradient-accent {
+            background: linear-gradient(90deg, #E2007A 0%, #007A33 100%);
+        }
+        /* Flag styles */
+        .flag-valledupar {
+            background: linear-gradient(to bottom, #003366 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%, #CC0000 66.6%);
+        }
+        .flag-cesar {
+            background: linear-gradient(to bottom, #007A33 50%, #FFFFFF 50%);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-areandina-magenta selection:text-white">
+
+    <!-- 1. BARRA DE PROTOCOLO SUPERIOR (EJE EJECUTIVO Y ACADÉMICO) -->
+    <div class="bg-valledupar-navy text-white text-xs border-b-2 border-festival-gold shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-2.5">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-2 mb-2">
+                <span class="font-extrabold tracking-wide uppercase text-festival-gold flex items-center gap-1.5">
+                    <i class="fa-solid fa-crown text-amber-400"></i> Mesa Directiva & Alianza Estratégica Institucional
+                </span>
+                <span class="text-slate-300 text-[11px] hidden lg:inline">
+                    <i class="fa-solid fa-calendar-check text-areandina-magenta mr-1"></i> Transparencia, Folclor e Innovación Tecnológica
+                </span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                <!-- Alcalde -->
+                <div class="flex items-center gap-2.5 bg-white/10 p-2 rounded-lg border border-white/10 hover:border-festival-gold transition">
+                    <div class="w-8 h-8 rounded-full bg-valledupar-blue flex items-center justify-center text-festival-gold shrink-0 border border-festival-gold/50">
+                        <i class="fa-solid fa-building-columns text-xs"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-white leading-tight truncate">Ernesto Orozco Durán</p>
+                        <p class="text-[10px] text-slate-300">Alcalde de Valledupar</p>
+                    </div>
+                </div>
+
+                <!-- Gobernadora -->
+                <div class="flex items-center gap-2.5 bg-white/10 p-2 rounded-lg border border-white/10 hover:border-festival-gold transition">
+                    <div class="w-8 h-8 rounded-full bg-areandina-green flex items-center justify-center text-white shrink-0 border border-emerald-400/50">
+                        <i class="fa-solid fa-landmark text-xs"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-white leading-tight truncate">Elvia Milena Sanjuán Dávila</p>
+                        <p class="text-[10px] text-slate-300">Gobernadora del Cesar</p>
+                    </div>
+                </div>
+
+                <!-- Rectora Sede Valledupar -->
+                <div class="flex items-center gap-2.5 bg-areandina-magenta/20 p-2 rounded-lg border border-areandina-magenta/50 hover:bg-areandina-magenta/30 transition">
+                    <div class="w-8 h-8 rounded-full bg-areandina-magenta flex items-center justify-center text-white shrink-0 shadow-sm">
+                        <i class="fa-solid fa-graduation-cap text-xs"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-white leading-tight truncate">Dra. Gelca Patricia Gutiérrez Barranco</p>
+                        <p class="text-[10px] text-pink-200">Rectora Sede Valledupar · Areandina</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. NAVBAR CON NAVEGACIÓN Y BOTÓN DE EMERGENCIAS -->
+    <header class="sticky top-0 z-40 bg-festival-cream/95 backdrop-blur-md border-b border-festival-gold/20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            
+            <!-- Logo e Identidad -->
+            <div class="flex items-center gap-3">
+                <div class="flex gap-1">
+                    <div class="flag-valledupar w-3.5 h-6 rounded-sm shadow-sm" title="Bandera de Valledupar"></div>
+                    <div class="flag-cesar w-3.5 h-6 rounded-sm shadow-sm" title="Bandera del Cesar"></div>
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg md:text-xl text-valledupar-blue tracking-tight block leading-none">
+                        Festival Vallenato <span class="text-areandina-green">Areandina</span>
+                    </span>
+                    <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-widest block">Valledupar · Cesar</span>
+                </div>
+            </div>
+
+            <!-- Menú de Navegación -->
+            <nav class="hidden lg:flex items-center gap-6 font-semibold text-sm text-slate-700">
+                <a href="#inicio" class="hover:text-areandina-green transition">Inicio</a>
+                <a href="#escenarios" class="hover:text-areandina-green transition">Guía Escenarios</a>
+                <a href="#votacion" class="hover:text-areandina-green transition">Votación Popular</a>
+                <a href="#turismo" class="hover:text-areandina-green transition">Hitos Turísticos</a>
+                <a href="#artesanias" class="hover:text-areandina-green transition">Feria Cesar</a>
+            </nav>
+
+            <!-- Acciones Rápidas -->
+            <div class="flex items-center gap-2">
+                <button onclick="toggleModal('modal-salud')" class="bg-valledupar-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shadow-md hover:shadow-lg active:scale-95">
+                    <i class="fa-solid fa-kit-medical text-sm animate-pulse"></i>
+                    <span class="hidden sm:inline">Puntos Salud & Auxilio</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER DE EMERGENCIA Y SALUD (MODAL INTERACTIVO) -->
+    <div id="modal-salud" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl border-2 border-valledupar-red overflow-hidden animate-in fade-in zoom-in duration-200">
+            <div class="bg-valledupar-red text-white p-4 flex items-center justify-between">
+                <div class="flex items-center gap-2 font-bold text-lg">
+                    <i class="fa-solid fa-shield-heart text-xl"></i> Puntos de Auxilio, Cruz Roja & Salud
+                </div>
+                <button onclick="toggleModal('modal-salud')" class="text-white/80 hover:text-white text-xl font-bold">&times;</button>
+            </div>
+            <div class="p-6 space-y-4">
+                <p class="text-xs text-slate-600">Dispositivo coordinado por la Alcaldía de Valledupar, Cruz Roja Colombiana y Defensa Civil durante las festividades del Festival Vallenato.</p>
+                
+                <div class="space-y-3 text-xs">
+                    <div class="p-3 bg-red-50 rounded-xl border border-red-100 flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-valledupar-red text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="text-slate-800 text-sm block">Puesto Balneario Hurtado (Río Guatapurí)</strong>
+                            <span class="text-slate-600">Atención médica prioritaria, salvavidas y módulo de hidratación.</span>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-red-50 rounded-xl border border-red-100 flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-valledupar-red text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="text-slate-800 text-sm block">Plaza Alfonso López (Centro Histórico)</strong>
+                            <span class="text-slate-600">Carpa de primeros auxilios y ambulancia medicalizada permanente.</span>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-red-50 rounded-xl border border-red-100 flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-valledupar-red text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="text-slate-800 text-sm block">Línea de Emergencia Municipal</strong>
+                            <span class="text-slate-600">Línea Gratuita 123 o PBX Salud Valledupar: (605) 574-8000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="toggleModal('modal-salud')" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 rounded-xl text-xs transition">
+                    Entendido / Cerrar Módulo
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION CON CONTADOR REGRESIVO -->
+    <section id="inicio" class="gradient-hero text-white py-12 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-festival-gold/40 text-festival-gold text-xs font-bold">
+                    <i class="fa-solid fa-award"></i> Patrimonio Cultural Inmaterial de la Humanidad · UNESCO
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                    Valledupar en Abril: Donde el <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-festival-gold">Acordeón, la Caja y la Guacharaca</span> son Leyenda.
+                </h1>
+
+                <p class="text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl">
+                    Plataforma institucional de apoyo a la conservación del folclor. Impulsada académicamente por la <strong>Fundación Universitaria del Área Andina (Sede Valledupar)</strong> en articulación con la <strong>Alcaldía de Valledupar</strong>, la <strong>Gobernación del Cesar</strong> y la <strong>Fundación Festival de la Leyenda Vallenata</strong>.
+                </p>
+
+                <!-- Cuenta Regresiva -->
+                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15 max-w-lg">
+                    <p class="text-xs font-bold text-amber-300 uppercase tracking-wider mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Cuenta Regresiva Coronación de Reyes Vallenatos
+                    </p>
+                    <div class="grid grid-cols-4 gap-3 text-center">
+                        <div class="bg-valledupar-navy/80 p-2.5 rounded-xl border border-white/10">
+                            <span id="timer-days" class="text-xl sm:text-2xl font-black text-white block">193</span>
+                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Días</span>
+                        </div>
+                        <div class="bg-valledupar-navy/80 p-2.5 rounded-xl border border-white/10">
+                            <span id="timer-hours" class="text-xl sm:text-2xl font-black text-white block">18</span>
+                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Horas</span>
+                        </div>
+                        <div class="bg-valledupar-navy/80 p-2.5 rounded-xl border border-white/10">
+                            <span id="timer-minutes" class="text-xl sm:text-2xl font-black text-white block">42</span>
+                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Min</span>
+                        </div>
+                        <div class="bg-valledupar-navy/80 p-2.5 rounded-xl border border-white/10">
+                            <span id="timer-seconds" class="text-xl sm:text-2xl font-black text-white block">09</span>
+                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Seg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+                <div class="relative bg-gradient-to-tr from-areandina-green to-valledupar-blue rounded-3xl p-6 shadow-2xl border border-white/20 text-center space-y-4">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-festival-gold/20 flex items-center justify-center border-2 border-festival-gold text-amber-300 text-3xl shadow-inner">
+                        <i class="fa-solid fa-drum"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Conservación de la Identidad Folclórica</h3>
+                    <p class="text-xs text-slate-200 leading-relaxed">
+                        Un espacio para el impulso de la investigación folclórica, el turismo sostenible y el reconocimiento popular de los aires vallenatos: Paseo, Merengue, Son y Puya.
+                    </p>
+                    <div class="pt-2 flex justify-center gap-3 text-xs font-semibold">
+                        <a href="#votacion" class="bg-festival-gold hover:bg-amber-600 text-slate-900 px-4 py-2.5 rounded-xl font-bold transition shadow">Votar por Categoría</a>
+                        <a href="#escenarios" class="bg-white/20 hover:bg-white/30 text-white px-4 py-2.5 rounded-xl transition">Ver Escenarios</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. CONTENIDO MULTIMEDIA EMBEBIDO (VIDEO OFICIAL DE PROTOCOLO) -->
+    <section class="max-w-7xl mx-auto px-4 py-10">
+        <div class="bg-white p-6 rounded-3xl shadow-md border border-slate-100">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 gap-2">
+                <div>
+                    <span class="text-areandina-green font-bold text-xs uppercase tracking-widest block">Transmisión e Hitos Institucionales</span>
+                    <h2 class="text-2xl font-extrabold text-valledupar-blue">Acompañamiento Institucional & Actividades Folclóricas</h2>
+                </div>
+                <span class="bg-emerald-100 text-areandina-green text-xs px-3 py-1 rounded-full font-bold">
+                    <i class="fa-solid fa-play-circle mr-1"></i> Video Protocolario
+                </span>
+            </div>
+            
+            <div class="relative w-full rounded-2xl overflow-hidden shadow-xl bg-slate-900 aspect-video max-h-[480px]">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/EPPzudYFSoM" title="Posesión y Actos Protocolarios Gobernación del Cesar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. GUÍA DE ESCENARIOS Y BOLETERÍA TRANSPARENTE -->
+    <section id="escenarios" class="max-w-7xl mx-auto px-4 py-12">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-areandina-magenta font-extrabold text-xs uppercase tracking-widest block">Transparencia para el Visitante</span>
+            <h2 class="text-3xl font-extrabold text-valledupar-blue mt-1">Guía Transparente de Escenarios y Boletería</h2>
+            <p class="text-slate-600 text-sm mt-2">Diferenciación clara entre las actividades de acceso público gratuito de la ciudad y las galas nocturnas con boletería de la Fundación.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- ESCENARIOS GRATUITOS -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-emerald-500/30 shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-areandina-green text-white px-4 py-1.5 rounded-bl-2xl text-xs font-black tracking-wide">
+                    100% LIBRE / GRATUITO
+                </div>
+                <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-areandina-green text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-door-open"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800">Escenarios Libres & Concursos Públicos</h3>
+                <p class="text-xs text-slate-500 mb-6">Eventos abiertos a toda la ciudadanía, turistas y familias sin costo de boletería.</p>
+
+                <ul class="space-y-3.5 text-xs text-slate-700">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-areandina-green text-base shrink-0 mt-0.5"></i>
+                        <div>
+                            <strong class="block text-slate-900">Plaza Alfonso López:</strong>
+                            <span>Eliminatorias diurnas de acordeón, piquerias y parrandas bajo el legendario palo de mango.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-areandina-green text-base shrink-0 mt-0.5"></i>
+                        <div>
+                            <strong class="block text-slate-900">Desfile de Piloneras (Inauguración):</strong>
+                            <span>Recorrido dancístico multitudinario por las principales avenidas de Valledupar.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-areandina-green text-base shrink-0 mt-0.5"></i>
+                        <div>
+                            <strong class="block text-slate-900">Balneario Hurtado / Río Guatapurí:</strong>
+                            <span>Econsectación cultural, actividades folclóricas y encuentros gastronómicos comunitarios.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BOLETERÍA PAGA -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-areandina-magenta/30 shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-areandina-magenta text-white px-4 py-1.5 rounded-bl-2xl text-xs font-black tracking-wide">
+                    BOLETERÍA OFICIAL
+                </div>
+                <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center text-areandina-magenta text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800">Parque de la Leyenda Vallenata</h3>
+                <p class="text-xs text-slate-500 mb-6">Espectáculos nocturnos y grandes finales en la Tarima "Colacho Mendoza".</p>
+
+                <ul class="space-y-3.5 text-xs text-slate-700">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-ticket text-areandina-magenta text-base shrink-0 mt-0.5"></i>
+                        <div>
+                            <strong class="block text-slate-900">Grandes Conciertos Nocturnos:</strong>
+                            <span>Presentaciones de artistas nacionales e internacionales de primer nivel.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-ticket text-areandina-magenta text-base shrink-0 mt-0.5"></i>
+                        <div>
+                            <strong class="block text-slate-900">Gran Final Rey de Reyes & Profesional:</strong>
+                            <span>Acceso con boletería numerada expedida exclusivamente por los canales de la Fundación.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-info text-amber-500 text-base shrink-0 mt-0.5"></i>
+                        <div>
+                            <strong class="block text-slate-900">Canales Autenticados:</strong>
+                            <span>Compre sus entradas únicamente a través de TuBoleta o taquillas autorizadas del Parque.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. SISTEMA DE VOTACIÓN POPULAR (MECANISMO ESTRICTO Y NOTA LEGAL) -->
+    <section id="votacion" class="bg-white py-12 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <span class="text-festival-gold font-black text-xs uppercase tracking-widest block">Participación Ciudadana Transparente</span>
+                <h2 class="text-3xl font-extrabold text-valledupar-blue mt-1">Votación Popular por Categorías Folclóricas</h2>
+                <p class="text-slate-600 text-sm mt-2">Valide su documento para emitir 1 voto único por categoría en el Reconocimiento Popular.</p>
+            </div>
+
+            <!-- AVISO LEGAL OFICIAL OBLIGATORIO -->
+            <div class="bg-amber-50 border-l-4 border-festival-gold p-4 rounded-xl text-xs text-amber-900 mb-8 max-w-4xl mx-auto flex items-start gap-3 shadow-sm">
+                <i class="fa-solid fa-scale-balanced text-lg text-festival-gold shrink-0 mt-0.5"></i>
+                <div>
+                    <strong class="font-bold block text-sm">Nota Legal e Institucional Reiterada:</strong>
+                    El voto digital registrado en esta plataforma otorga exclusivamente el <strong>Reconocimiento Popular del Público</strong> y <u>no reemplaza, modifica ni interfiere</u> en el fallo técnico del Jurado Calificador oficial designado en la Tarima "Francisco El Hombre" de la Fundación Festival de la Leyenda Vallenata.
+                </div>
+            </div>
+
+            <!-- Formulario de Identificación por Cédula -->
+            <div class="max-w-md mx-auto bg-festival-cream p-5 rounded-2xl border border-festival-gold/30 shadow-sm mb-10">
+                <label for="cedula-input" class="block text-xs font-bold text-slate-700 mb-2">
+                    <i class="fa-solid fa-id-card text-areandina-green mr-1"></i> Ingrese su Cédula de Ciudadanía (Validación de Voto Único):
+                </label>
+                <div class="flex gap-2">
+                    <input type="text" id="cedula-input" placeholder="Ej: 1065123456" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-areandina-green bg-white">
+                    <button onclick="validarCedula()" class="bg-valledupar-blue hover:bg-slate-800 text-white font-bold px-4 py-2 rounded-xl text-xs transition shrink-0">
+                        Validar
+                    </button>
+                </div>
+                <p id="cedula-status" class="text-[11px] mt-2 font-semibold text-slate-500">Ingrese su número para habilitar los botones de votación.</p>
+            </div>
+
+            <!-- Tarjetas de Categorías con Insignias Culturales -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Acordeón Profesional -->
+                <div class="bg-festival-cream rounded-2xl p-6 border border-slate-200 text-center space-y-4 hover:shadow-lg transition">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-gradient-gold flex items-center justify-center text-white text-2xl shadow-md">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-festival-gold uppercase tracking-wider block">Insignia Dorada</span>
+                        <h3 class="font-bold text-base text-slate-900">Acordeón Profesional</h3>
+                        <p class="text-xs text-slate-500 mt-1">Rey Vallenato del Folclor</p>
+                    </div>
+                    <div class="pt-2">
+                        <button id="btn-cat-1" onclick="ejecutarVoto(1, 'Acordeón Profesional')" disabled class="w-full bg-slate-300 text-slate-500 font-bold py-2.5 rounded-xl text-xs transition cursor-not-allowed">
+                            Validación Requerida
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Acordeón Aficionado -->
+                <div class="bg-festival-cream rounded-2xl p-6 border border-slate-200 text-center space-y-4 hover:shadow-lg transition">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-tr from-areandina-green to-emerald-500 flex items-center justify-center text-white text-2xl shadow-md">
+                        <i class="fa-solid fa-guitar"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-areandina-green uppercase tracking-wider block">Fuelle de Oro</span>
+                        <h3 class="font-bold text-base text-slate-900">Acordeón Aficionado</h3>
+                        <p class="text-xs text-slate-500 mt-1">Futuros Maestros del Aire</p>
+                    </div>
+                    <div class="pt-2">
+                        <button id="btn-cat-2" onclick="ejecutarVoto(2, 'Acordeón Aficionado')" disabled class="w-full bg-slate-300 text-slate-500 font-bold py-2.5 rounded-xl text-xs transition cursor-not-allowed">
+                            Validación Requerida
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Canción Inédita -->
+                <div class="bg-festival-cream rounded-2xl p-6 border border-slate-200 text-center space-y-4 hover:shadow-lg transition">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-tr from-valledupar-blue to-indigo-600 flex items-center justify-center text-white text-2xl shadow-md">
+                        <i class="fa-solid fa-feather-pointed"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-valledupar-blue uppercase tracking-wider block">Pluma del Verso</span>
+                        <h3 class="font-bold text-base text-slate-900">Canción Inédita</h3>
+                        <p class="text-xs text-slate-500 mt-1">Lírica & Poesía Vallenata</p>
+                    </div>
+                    <div class="pt-2">
+                        <button id="btn-cat-3" onclick="ejecutarVoto(3, 'Canción Inédita')" disabled class="w-full bg-slate-300 text-slate-500 font-bold py-2.5 rounded-xl text-xs transition cursor-not-allowed">
+                            Validación Requerida
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Piqueria Vallenata -->
+                <div class="bg-festival-cream rounded-2xl p-6 border border-slate-200 text-center space-y-4 hover:shadow-lg transition">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-tr from-areandina-magenta to-pink-600 flex items-center justify-center text-white text-2xl shadow-md">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-areandina-magenta uppercase tracking-wider block">Trofeo de la Piqueria</span>
+                        <h3 class="font-bold text-base text-slate-900">Piqueria Vallenata</h3>
+                        <p class="text-xs text-slate-500 mt-1">Repente & Verso Improvisado</p>
+                    </div>
+                    <div class="pt-2">
+                        <button id="btn-cat-4" onclick="ejecutarVoto(4, 'Piqueria Vallenata')" disabled class="w-full bg-slate-300 text-slate-500 font-bold py-2.5 rounded-xl text-xs transition cursor-not-allowed">
+                            Validación Requerida
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. RUTAS TURÍSTICAS E HITOS VALLENATOS (MAPEO INTERACTIVO) -->
+    <section id="turismo" class="max-w-7xl mx-auto px-4 py-12">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-valledupar-blue font-extrabold text-xs uppercase tracking-widest block">Descubre Valledupar</span>
+            <h2 class="text-3xl font-extrabold text-valledupar-blue mt-1">Rutas Turísticas e Hitos Culturales</h2>
+            <p class="text-slate-600 text-sm mt-2">Puntos de interés recomendados por la Alcaldía de Valledupar y la Gobernación del Cesar.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-100 text-festival-gold flex items-center justify-center font-bold text-lg">
+                    <i class="fa-solid fa-landmark"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-sm">Plaza Alfonso López</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">Cuna histórica del festival. Sede del Palo de Mango y concursos diurnos libres.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-areandina-green flex items-center justify-center font-bold text-lg">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-sm">Balneario Hurtado (Guatapurí)</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">Aguas heladas de la Sierra Nevada, monumento a la Sirena y muestras culturales.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-100 text-valledupar-blue flex items-center justify-center font-bold text-lg">
+                    <i class="fa-solid fa-record-vinyl"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-sm">Glorieta de los Juglares</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">Homenaje escultural a los grandes compositores y cantantes del folclor.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-pink-100 text-areandina-magenta flex items-center justify-center font-bold text-lg">
+                    <i class="fa-solid fa-archway"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-sm">Parque de la Leyenda</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">Coliseo "Consuelo Araujonoguera", epicentro de los conciertos y finales.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. FERIA ARTESANAL Y ECONOMÍA NARANJA DEL CESAR -->
+    <section id="artesanias" class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-festival-gold font-bold text-xs uppercase tracking-widest block">Economía Naranja · Gobernación del Cesar</span>
+                    <h2 class="text-2xl font-extrabold text-white mt-1">Muestra Artesanal y Gastronómica Tradicional</h2>
+                </div>
+                <span class="text-xs text-slate-300">Apoyo a los artesanos locales del Departamento</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl space-y-2">
+                    <i class="fa-solid fa-bag-shopping text-2xl text-areandina-magenta"></i>
+                    <h4 class="font-bold text-sm text-white">Mochilas Arhuacas & Kankuamas</h4>
+                    <p class="text-xs text-slate-300">Tejidos ancestrales elaborados a mano por comunidades de la Sierra Nevada.</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl space-y-2">
+                    <i class="fa-solid fa-cheese text-2xl text-amber-400"></i>
+                    <h4 class="font-bold text-sm text-white">Gastronomía del Cesar</h4>
+                    <p class="text-xs text-slate-300">Queso costeño picado, chiricoca, dulce de leche de La Paz y panuchí tradicional.</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl space-y-2">
+                    <i class="fa-solid fa-gem text-2xl text-areandina-green"></i>
+                    <h4 class="font-bold text-sm text-white">Instrumentos Tallados</h4>
+                    <p class="text-xs text-slate-300">Cajas vallenatas, guacharacas de lata y artesanías en madera fina tallada.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. PIE DE PÁGINA (FOOTER) INSTITUCIONAL -->
+    <footer class="bg-valledupar-navy text-white text-xs border-t-4 border-areandina-green py-10">
+        <div class="max-w-7xl mx-auto px-4 space-y-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-slate-300">
+                <div class="space-y-2">
+                    <strong class="text-white text-sm block">Areandina Sede Valledupar</strong>
+                    <p class="leading-relaxed">Comprometidos con el desarrollo académico, científico y la conservación del folclor en el Cesar.</p>
+                </div>
+                
+                <div class="space-y-2">
+                    <strong class="text-white text-sm block">Alcaldía de Valledupar</strong>
+                    <p class="leading-relaxed">Gestión Municipal para un festival seguro, organizado e incluyente para todos.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <strong class="text-white text-sm block">Gobernación del Cesar</strong>
+                    <p class="leading-relaxed">Impulso al turismo, cultura e infraestructura del departamento.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <strong class="text-white text-sm block">Fundación Festival</strong>
+                    <p class="leading-relaxed">Organización oficial guardiana del folclor y los concursos de Reyes Vallenatos.</p>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-white/10 text-center text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <span>&copy; 2026 Alianza Institucional Plataforma Vallenata. Todos los derechos reservados.</span>
+                <div class="flex gap-4">
+                    <span class="hover:text-white transition">Términos de Uso</span>
+                    <span class="hover:text-white transition">Política de Tratamiento de Datos</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LÓGICO DE INTERACCIÓN Y VOTACIÓN -->
+    <script>
+        // Estado de Votación
+        let cedulaValidada = false;
+        let cedulaActual = '';
+
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.toggle('hidden');
+            }
+        }
+
+        function validarCedula() {
+            const input = document.getElementById('cedula-input');
+            const status = document.getElementById('cedula-status');
+            const num = input.value.trim();
+
+            if (num.length < 6 || isNaN(num)) {
+                status.innerText = '❌ Por favor ingrese un número de cédula válido (mínimo 6 dígitos).';
+                status.className = 'text-[11px] mt-2 font-bold text-red-500';
+                cedulaValidada = false;
+                actualizarBotonesVotacion(false);
+                return;
+            }
+
+            cedulaValidada = true;
+            cedulaActual = num;
+            status.innerText = `✓ Cédula ${num} autenticada. Puede emitir 1 voto por categoría.`;
+            status.className = 'text-[11px] mt-2 font-bold text-emerald-600';
+            actualizarBotonesVotacion(true);
+        }
+
+        function actualizarBotonesVotacion(habilitar) {
+            for (let i = 1; i <= 4; i++) {
+                const btn = document.getElementById(`btn-cat-${i}`);
+                if (btn) {
+                    const votoClave = `voto_cat_${i}_cedula_${cedulaActual}`;
+                    const yaVoto = localStorage.getItem(votoClave);
+
+                    if (!habilitar) {
+                        btn.disabled = true;
+                        btn.innerText = 'Validación Requerida';
+                        btn.className = 'w-full bg-slate-300 text-slate-500 font-bold py-2.5 rounded-xl text-xs transition cursor-not-allowed';
+                    } else if (yaVoto) {
+                        btn.disabled = true;
+                        btn.innerText = 'Voto Registrado ✓';
+                        btn.className = 'w-full bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-xs transition cursor-default shadow-sm';
+                    } else {
+                        btn.disabled = false;
+                        btn.innerText = 'Emitir Voto Popular';
+                        btn.className = 'w-full bg-areandina-green hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs transition shadow hover:shadow-md active:scale-95';
+                    }
+                }
+            }
+        }
+
+        function ejecutarVoto(categoriaId, nombreCategoria) {
+            if (!cedulaValidada || !cedulaActual) {
+                alert('Debe ingresar y validar su Cédula antes de votar.');
+                return;
+            }
+
+            const votoClave = `voto_cat_${categoriaId}_cedula_${cedulaActual}`;
+            
+            if (localStorage.getItem(votoClave)) {
+                alert(`Usted ya registró previamente un voto para la categoría: ${nombreCategoria} con la Cédula ${cedulaActual}.`);
+                return;
+            }
+
+            // Registrar Voto
+            localStorage.setItem(votoClave, 'true');
+            
+            // Actualizar Botón a "Voto Registrado ✓"
+            const btn = document.getElementById(`btn-cat-${categoriaId}`);
+            if (btn) {
+                btn.innerText = 'Voto Registrado ✓';
+                btn.className = 'w-full bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-xs transition cursor-default shadow-sm';
+                btn.disabled = true;
+            }
+
+            alert(`¡Voto registrado exitosamente!\n\nCategoría: ${nombreCategoria}\nCédula: ${cedulaActual}\n\nNota: Este voto equivale al Reconocimiento Popular del Público.`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+:root {
+    --areandina-green: #007A33;
+    --areandina-magenta: #E2007A;
+    --valledupar-blue: #003366;
+    --valledupar-red: #CC0000;
+    --festival-gold: #C5A059;
+    --bg-cream: #FAF6ED;
+    --card-bg: #FFFFFF;
+    --text-main: #1A1A1A;
+    --text-muted: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-main);
+}
+
+/* Protocol Bar */
+.protocol-bar {
+    background: #002244;
+    color: white;
+    padding: 10px 5%;
+    font-size: 0.8rem;
+    border-bottom: 2px solid var(--festival-gold);
+}
+
+.protocol-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.protocol-title {
+    color: var(--festival-gold);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.protocol-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.protocol-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.protocol-card.highlight-academic {
+    border-left: 3px solid var(--areandina-magenta);
+    background: rgba(226, 0, 122, 0.15);
+}
+
+.protocol-card strong {
+    display: block;
+    font-size: 0.82rem;
+    color: white;
+}
+
+.protocol-card small {
+    color: #BDC3C7;
+    font-size: 0.7rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(250, 246, 237, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(197, 160, 89, 0.2);
+}
+
+.institutional-flags {
+    display: flex;
+    gap: 4px;
+}
+
+.flag-valledupar {
+    width: 16px;
+    height: 24px;
+    background: linear-gradient(to bottom, var(--valledupar-blue) 33%, #FFFFFF 33%, #FFFFFF 66%, var(--valledupar-red) 66%);
+    border-radius: 3px;
+}
+
+.flag-cesar {
+    width: 16px;
+    height: 24px;
+    background: linear-gradient(to bottom, var(--areandina-green) 50%, #FFFFFF 50%);
+    border-radius: 3px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--valledupar-blue);
+}
+
+.brand-title span {
+    color: var(--areandina-green);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-emergency {
+    background: var(--valledupar-red);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* Modals */
+.emergency-modal {
+    position: fixed;
+    top: 80px;
+    right: 5%;
+    background: white;
+    border: 2px solid var(--valledupar-red);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 2000;
+    max-width: 380px;
+}
+
+.emergency-modal.hidden {
+    display: none;
+}
+
+.emergency-content h4 {
+    color: var(--valledupar-red);
+    margin-bottom: 0.8rem;
+}
+
+.emergency-content ul {
+    list-style: none;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.emergency-content li {
+    margin-bottom: 0.5rem;
+}
+
+.btn-close {
+    background: var(--valledupar-blue);
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    padding: 3.5rem 5%;
+    align-items: center;
+    gap: 3rem;
+}
+
+.tag-unesco {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(197, 160, 89, 0.15);
+    color: #8C6D2A;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: 2.6rem;
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--valledupar-blue);
+    margin-bottom: 1.2rem;
+}
+
+.hero-content h1 span {
+    color: var(--areandina-magenta);
+}
+
+.hero-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.countdown-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 122, 51, 0.2);
+    padding: 1.2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.countdown-header {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--areandina-green);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot-live {
+    width: 8px;
+    height: 8px;
+    background: var(--areandina-green);
+    border-radius: 50%;
+}
+
+.timers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.timers div span {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--valledupar-blue);
+}
+
+.timers div small {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    display: block;
+}
+
+.hero-visual {
+    position: relative;
+    height: 320px;
+    background: linear-gradient(135deg, var(--areandina-green), var(--valledupar-blue));
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card-floating {
+    position: absolute;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.card-1 { top: 30px; left: -20px; }
+.card-2 { bottom: 30px; right: -20px; }
+
+/* Video Section */
+.video-section {
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sections */
+.section-container {
+    padding: 4rem 5%;
+}
+
+.alt-bg {
+    background: rgba(0, 122, 51, 0.03);
+    border-top: 1px solid rgba(0, 122, 51, 0.08);
+    border-bottom: 1px solid rgba(0, 122, 51, 0.08);
+}
+
+.section-container h2 {
+    font-size: 2rem;
+    color: var(--valledupar-blue);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+/* Access Grid */
+.access-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.access-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+}
+
+.access-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    background: rgba(0, 122, 51, 0.15);
+    color: var(--areandina-green);
+    margin-bottom: 1rem;
+}
+
+.ticket-badge {
+    background: rgba(226, 0, 122, 0.15);
+    color: var(--areandina-magenta);
+}
+
+.access-card ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.access-card li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+/* Voting System */
+.legal-notice {
+    background: rgba(197, 160, 89, 0.15);
+    border-left: 4px solid var(--festival-gold);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.voter-auth-box {
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+.voter-auth-box label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--valledupar-blue);
+}
+
+.voter-auth-box input {
+    width: 100%;
+    max-width: 350px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+}
+
+.voting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.voting-card {
+    background: white;
+    padding: 1.8rem 1.2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+}
+
+.voting-icon {
+    font-size: 2rem;
+    color: var(--festival-gold);
+    margin-bottom: 1rem;
+}
+
+.voting-card h3 {
+    font-size: 1.1rem;
+    color: var(--valledupar-blue);
+    margin-bottom: 0.3rem;
+}
+
+.voting-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #EEE;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--areandina-green);
+}
+
+.btn-vote {
+    background: var(--areandina-green);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.btn-vote.voted {
+    background: #888;
+    cursor: not-allowed;
+}
+
+/* Tourism & Crafts */
+.places-grid, .crafts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.place-card, .craft-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+}
+
+.place-card i, .craft-item i {
+    font-size: 1.8rem;
+    color: var(--valledupar-blue);
+    margin-bottom: 0.8rem;
+}
+
+footer {
+    background: var(--valledupar-blue);
+    color: white;
+    padding: 2.5rem 5%;
+    text-align: center;
+}
+
+.footer-alliance p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.copyright {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: #BDC3C7;
+}
