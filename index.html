@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festival de la Leyenda Vallenata | Areandina, Valledupar & Cesar</title>
+    <title>Festival de la Leyenda Vallenata | Valledupar</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,40 +17,41 @@
                             lightgreen: '#00A846'
                         },
                         valledupar: {
-                            blue: '#003366',
-                            red: '#CC0000',
-                            navy: '#002244'
+                            blue: '#211B18',
+                            red: '#A9232B',
+                            navy: '#171310'
                         },
                         festival: {
-                            gold: '#C5A059',
-                            darkgold: '#9E7A32',
-                            cream: '#FAF6ED'
+                            gold: '#D4A246',
+                            darkgold: '#A97B27',
+                            cream: '#F7F4ED'
                         }
                     },
                     fontFamily: {
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Playfair Display', 'Georgia', 'serif'],
                     }
                 }
             }
         }
     </script>
     <!-- Google Fonts & Font Awesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #FAF6ED;
+            background-color: #F7F4ED;
         }
         .gradient-gold {
-            background: linear-gradient(135deg, #C5A059 0%, #9E7A32 100%);
+            background: linear-gradient(135deg, #E4BC68 0%, #A97B27 100%);
         }
         .gradient-hero {
-            background: linear-gradient(135deg, #002244 0%, #003366 50%, #007A33 100%);
+            background: radial-gradient(ellipse at 82% 22%, rgba(169, 123, 39, .32), transparent 32%), linear-gradient(115deg, #171310 0%, #251B14 62%, #3B2617 100%);
         }
         .gradient-accent {
-            background: linear-gradient(90deg, #E2007A 0%, #007A33 100%);
+            background: linear-gradient(90deg, #A9232B 0%, #D4A246 100%);
         }
         /* Flag styles */
         .flag-valledupar {
@@ -61,92 +62,41 @@
         }
     </style>
 </head>
-<body class="text-slate-800 antialiased selection:bg-areandina-magenta selection:text-white">
+<body class="text-slate-800 antialiased selection:bg-festival-gold selection:text-valledupar-navy">
 
-    <!-- 1. BARRA DE PROTOCOLO SUPERIOR (EJE EJECUTIVO Y ACADÉMICO) -->
-    <div class="bg-valledupar-navy text-white text-xs border-b-2 border-festival-gold shadow-md">
-        <div class="max-w-7xl mx-auto px-4 py-2.5">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-2 mb-2">
-                <span class="font-extrabold tracking-wide uppercase text-festival-gold flex items-center gap-1.5">
-                    <i class="fa-solid fa-crown text-amber-400"></i> Mesa Directiva & Alianza Estratégica Institucional
-                </span>
-                <span class="text-slate-300 text-[11px] hidden lg:inline">
-                    <i class="fa-solid fa-calendar-check text-areandina-magenta mr-1"></i> Transparencia, Folclor e Innovación Tecnológica
-                </span>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                <!-- Alcalde -->
-                <div class="flex items-center gap-2.5 bg-white/10 p-2 rounded-lg border border-white/10 hover:border-festival-gold transition">
-                    <div class="w-8 h-8 rounded-full bg-valledupar-blue flex items-center justify-center text-festival-gold shrink-0 border border-festival-gold/50">
-                        <i class="fa-solid fa-building-columns text-xs"></i>
-                    </div>
-                    <div class="truncate">
-                        <p class="font-bold text-white leading-tight truncate">Ernesto Orozco Durán</p>
-                        <p class="text-[10px] text-slate-300">Alcalde de Valledupar</p>
-                    </div>
-                </div>
+    <header class="sticky top-0 z-40 border-b border-stone-200 bg-white/95 shadow-sm backdrop-blur-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+            <a href="#inicio" class="shrink-0" aria-label="Festival de la Leyenda Vallenata, inicio">
+                <img src="assets/festival-logo.png" alt="Fundación Festival de la Leyenda Vallenata" class="h-auto w-52 sm:w-60 md:w-64">
+            </a>
 
-                <!-- Gobernadora -->
-                <div class="flex items-center gap-2.5 bg-white/10 p-2 rounded-lg border border-white/10 hover:border-festival-gold transition">
-                    <div class="w-8 h-8 rounded-full bg-areandina-green flex items-center justify-center text-white shrink-0 border border-emerald-400/50">
-                        <i class="fa-solid fa-landmark text-xs"></i>
-                    </div>
-                    <div class="truncate">
-                        <p class="font-bold text-white leading-tight truncate">Elvia Milena Sanjuán Dávila</p>
-                        <p class="text-[10px] text-slate-300">Gobernadora del Cesar</p>
-                    </div>
-                </div>
-
-                <!-- Rectora Sede Valledupar -->
-                <div class="flex items-center gap-2.5 bg-areandina-magenta/20 p-2 rounded-lg border border-areandina-magenta/50 hover:bg-areandina-magenta/30 transition">
-                    <div class="w-8 h-8 rounded-full bg-areandina-magenta flex items-center justify-center text-white shrink-0 shadow-sm">
-                        <i class="fa-solid fa-graduation-cap text-xs"></i>
-                    </div>
-                    <div class="truncate">
-                        <p class="font-bold text-white leading-tight truncate">Dra. Gelca Patricia Gutiérrez Barranco</p>
-                        <p class="text-[10px] text-pink-200">Rectora Sede Valledupar · Areandina</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2. NAVBAR CON NAVEGACIÓN Y BOTÓN DE EMERGENCIAS -->
-    <header class="sticky top-0 z-40 bg-festival-cream/95 backdrop-blur-md border-b border-festival-gold/20 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            
-            <!-- Logo e Identidad -->
-            <div class="flex items-center gap-3">
-                <div class="flex gap-1">
-                    <div class="flag-valledupar w-3.5 h-6 rounded-sm shadow-sm" title="Bandera de Valledupar"></div>
-                    <div class="flag-cesar w-3.5 h-6 rounded-sm shadow-sm" title="Bandera del Cesar"></div>
-                </div>
-                <div>
-                    <span class="font-extrabold text-lg md:text-xl text-valledupar-blue tracking-tight block leading-none">
-                        Festival Vallenato <span class="text-areandina-green">Areandina</span>
-                    </span>
-                    <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-widest block">Valledupar · Cesar</span>
-                </div>
-            </div>
-
-            <!-- Menú de Navegación -->
-            <nav class="hidden lg:flex items-center gap-6 font-semibold text-sm text-slate-700">
-                <a href="#inicio" class="hover:text-areandina-green transition">Inicio</a>
-                <a href="#escenarios" class="hover:text-areandina-green transition">Guía Escenarios</a>
-                <a href="#votacion" class="hover:text-areandina-green transition">Votación Popular</a>
-                <a href="#turismo" class="hover:text-areandina-green transition">Hitos Turísticos</a>
-                <a href="#artesanias" class="hover:text-areandina-green transition">Feria Cesar</a>
+            <nav class="hidden items-center gap-5 font-semibold text-sm text-stone-700 lg:flex" aria-label="Navegación principal">
+                <a href="#inicio" class="transition hover:text-festival-darkgold">Inicio</a>
+                <a href="#escenarios" class="transition hover:text-festival-darkgold">Escenarios</a>
+                <a href="#votacion" class="transition hover:text-festival-darkgold">Votación</a>
+                <a href="#turismo" class="transition hover:text-festival-darkgold">Turismo</a>
+                <a href="#artesanias" class="transition hover:text-festival-darkgold">Artesanías</a>
             </nav>
 
-            <!-- Acciones Rápidas -->
-            <div class="flex items-center gap-2">
-                <button onclick="toggleModal('modal-salud')" class="bg-valledupar-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shadow-md hover:shadow-lg active:scale-95">
-                    <i class="fa-solid fa-kit-medical text-sm animate-pulse"></i>
-                    <span class="hidden sm:inline">Puntos Salud & Auxilio</span>
+            <div class="flex shrink-0 items-center gap-2">
+                <button onclick="toggleModal('modal-salud')" aria-label="Ver puntos de salud y auxilio" class="flex items-center gap-2 rounded-full bg-valledupar-red px-3 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-red-800">
+                    <i class="fa-solid fa-kit-medical text-sm"></i>
+                    <span class="hidden sm:inline">Puntos de auxilio</span>
+                </button>
+                <button id="menu-toggle" type="button" aria-controls="mobile-navigation" aria-expanded="false" aria-label="Abrir menú" onclick="toggleNavigation()" class="flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 text-valledupar-navy transition hover:border-festival-gold lg:hidden">
+                    <i class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
+        <nav id="mobile-navigation" class="hidden border-t border-stone-100 bg-white px-4 py-3 lg:hidden" aria-label="Navegación móvil">
+            <div class="mx-auto flex max-w-7xl flex-col gap-1 font-semibold text-sm text-stone-700">
+                <a href="#inicio" onclick="toggleNavigation()" class="rounded-lg px-3 py-2 hover:bg-festival-cream">Inicio</a>
+                <a href="#escenarios" onclick="toggleNavigation()" class="rounded-lg px-3 py-2 hover:bg-festival-cream">Escenarios</a>
+                <a href="#votacion" onclick="toggleNavigation()" class="rounded-lg px-3 py-2 hover:bg-festival-cream">Votación popular</a>
+                <a href="#turismo" onclick="toggleNavigation()" class="rounded-lg px-3 py-2 hover:bg-festival-cream">Turismo</a>
+                <a href="#artesanias" onclick="toggleNavigation()" class="rounded-lg px-3 py-2 hover:bg-festival-cream">Artesanías</a>
+            </div>
+        </nav>
     </header>
 
     <!-- BANNER DE EMERGENCIA Y SALUD (MODAL INTERACTIVO) -->
@@ -195,62 +145,47 @@
     </div>
 
     <!-- HERO SECTION CON CONTADOR REGRESIVO -->
-    <section id="inicio" class="gradient-hero text-white py-12 md:py-20 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <section id="inicio" class="gradient-hero relative overflow-hidden py-14 text-white md:py-24">
+        <div class="absolute inset-0 opacity-[0.12] bg-[radial-gradient(#D4A246_1px,transparent_1px)] [background-size:18px_18px]"></div>
         
-        <div class="max-w-7xl mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 md:px-6 lg:grid-cols-12">
             
-            <div class="lg:col-span-7 space-y-6">
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-festival-gold/40 text-festival-gold text-xs font-bold">
+            <div class="space-y-6 lg:col-span-7">
+                <div class="inline-flex items-center gap-2 rounded-full border border-festival-gold/40 bg-white/10 px-3.5 py-1.5 text-xs font-bold text-amber-200 backdrop-blur-md">
                     <i class="fa-solid fa-award"></i> Patrimonio Cultural Inmaterial de la Humanidad · UNESCO
                 </div>
 
-                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                    Valledupar en Abril: Donde el <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-festival-gold">Acordeón, la Caja y la Guacharaca</span> son Leyenda.
+                <h1 class="max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                    La leyenda que <span class="text-festival-gold">suena</span> en Valledupar
                 </h1>
 
-                <p class="text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl">
-                    Plataforma institucional de apoyo a la conservación del folclor. Impulsada académicamente por la <strong>Fundación Universitaria del Área Andina (Sede Valledupar)</strong> en articulación con la <strong>Alcaldía de Valledupar</strong>, la <strong>Gobernación del Cesar</strong> y la <strong>Fundación Festival de la Leyenda Vallenata</strong>.
+                <p class="max-w-2xl text-sm leading-relaxed text-stone-200 sm:text-base">
+                    Acordeón, caja y guacharaca se encuentran en la gran fiesta del folclor vallenato. Descubre sus escenarios, tradiciones y rutas para vivir el Festival.
                 </p>
 
-                <!-- Cuenta Regresiva -->
-                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15 max-w-lg">
-                    <p class="text-xs font-bold text-amber-300 uppercase tracking-wider mb-3 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Cuenta Regresiva Coronación de Reyes Vallenatos
-                    </p>
-                    <div class="grid grid-cols-4 gap-3 text-center">
-                        <div class="bg-valledupar-navy/80 p-2.5 rounded-xl border border-white/10">
-                            <span id="timer-days" class="text-xl sm:text-2xl font-black text-white block">193</span>
-                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Días</span>
-                        </div>
-                        <div class="bg-valledupar-navy/80 p-2.5 rounded-xl border border-white/10">
-                            <span id="timer-hours" class="text-xl sm:text-2xl font-black text-white block">18</span>
-                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Horas</span>
-                        </div>
-                        <div class="bg-valledupar-navy/80 p-2.5 rounded-xl border border-white/10">
-                            <span id="timer-minutes" class="text-xl sm:text-2xl font-black text-white block">42</span>
-                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Min</span>
-                        </div>
-                        <div class="bg-valledupar-navy/80 p-2.5 rounded-xl border border-white/10">
-                            <span id="timer-seconds" class="text-xl sm:text-2xl font-black text-white block">09</span>
-                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Seg</span>
-                        </div>
-                    </div>
+                <div class="flex flex-wrap gap-3 pt-1">
+                    <a href="#escenarios" class="rounded-full bg-festival-gold px-5 py-3 text-sm font-extrabold text-valledupar-navy shadow-lg transition hover:bg-amber-300">Explorar el Festival</a>
+                    <a href="#turismo" class="rounded-full border border-white/30 px-5 py-3 text-sm font-bold text-white transition hover:border-festival-gold hover:text-festival-gold">Descubrir Valledupar</a>
                 </div>
             </div>
 
-            <div class="lg:col-span-5 relative">
-                <div class="relative bg-gradient-to-tr from-areandina-green to-valledupar-blue rounded-3xl p-6 shadow-2xl border border-white/20 text-center space-y-4">
-                    <div class="w-20 h-20 mx-auto rounded-full bg-festival-gold/20 flex items-center justify-center border-2 border-festival-gold text-amber-300 text-3xl shadow-inner">
+            <div class="relative lg:col-span-5">
+                <div class="relative overflow-hidden rounded-[2rem] border border-festival-gold/40 bg-black/20 p-7 text-center shadow-2xl backdrop-blur-sm sm:p-9">
+                    <div class="absolute -right-12 -top-16 h-48 w-48 rounded-full border border-festival-gold/20"></div>
+                    <div class="absolute -right-5 -top-9 h-32 w-32 rounded-full border border-festival-gold/20"></div>
+                    <div class="relative mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-festival-gold/60 bg-festival-gold/10 text-3xl text-festival-gold">
                         <i class="fa-solid fa-drum"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Conservación de la Identidad Folclórica</h3>
-                    <p class="text-xs text-slate-200 leading-relaxed">
-                        Un espacio para el impulso de la investigación folclórica, el turismo sostenible y el reconocimiento popular de los aires vallenatos: Paseo, Merengue, Son y Puya.
+                    <p class="relative mb-2 text-xs font-extrabold uppercase tracking-[0.24em] text-festival-gold">Tradición que nos une</p>
+                    <h2 class="relative font-display text-2xl font-bold text-white sm:text-3xl">Cuatro aires, una sola leyenda</h2>
+                    <p class="relative mt-3 text-sm leading-relaxed text-stone-300">
+                        Paseo, merengue, son y puya: el legado musical que hace de Valledupar la casa del vallenato.
                     </p>
-                    <div class="pt-2 flex justify-center gap-3 text-xs font-semibold">
-                        <a href="#votacion" class="bg-festival-gold hover:bg-amber-600 text-slate-900 px-4 py-2.5 rounded-xl font-bold transition shadow">Votar por Categoría</a>
-                        <a href="#escenarios" class="bg-white/20 hover:bg-white/30 text-white px-4 py-2.5 rounded-xl transition">Ver Escenarios</a>
+                    <div class="relative mt-6 flex flex-wrap justify-center gap-2 text-xs font-bold text-white">
+                        <span class="rounded-full border border-white/15 px-3 py-1.5">Paseo</span>
+                        <span class="rounded-full border border-white/15 px-3 py-1.5">Merengue</span>
+                        <span class="rounded-full border border-white/15 px-3 py-1.5">Son</span>
+                        <span class="rounded-full border border-white/15 px-3 py-1.5">Puya</span>
                     </div>
                 </div>
             </div>
@@ -592,6 +527,17 @@
         // Estado de Votación
         let cedulaValidada = false;
         let cedulaActual = '';
+
+        function toggleNavigation() {
+            const navigation = document.getElementById('mobile-navigation');
+            const button = document.getElementById('menu-toggle');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+            navigation.classList.toggle('hidden', isExpanded);
+            button.setAttribute('aria-expanded', String(!isExpanded));
+            button.setAttribute('aria-label', isExpanded ? 'Abrir menú' : 'Cerrar menú');
+            button.innerHTML = `<i class="fa-solid ${isExpanded ? 'fa-bars' : 'fa-xmark'} text-lg"></i>`;
+        }
 
         function toggleModal(id) {
             const modal = document.getElementById(id);
